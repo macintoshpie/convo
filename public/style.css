@@ -1,0 +1,32 @@
+body {
+  background-color: #f2f0e9;
+}
+
+button {
+  font-size: 20px;
+  border: none;
+}
+
+button:hover {
+  filter: brightness(94%);
+}
+
+#main-container {
+  margin: auto;
+}
+
+p {
+  padding: 1em;
+  width: 50%;
+  border-radius: 3px;
+}
+
+p:nth-child(odd) {
+  color: white;
+  background-color: black;
+}
+
+p:nth-child(even) {
+  color: black;
+  background-color: white;
+}
