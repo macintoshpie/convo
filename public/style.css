@@ -1,10 +1,12 @@
 body {
   background-color: #f2f0e9;
+  font-size: 3em;
+  margin-bottom: 300px;
 }
 
 button {
-  font-size: 20px;
   border: none;
+  font-size: 3.5em;
 }
 
 button:hover {
@@ -13,20 +15,67 @@ button:hover {
 
 #main-container {
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-p {
-  padding: 1em;
-  width: 50%;
-  border-radius: 3px;
+.box {
+  padding: 0.5em;
+  border-radius: 10px;
+  margin: 0.5em;
+  scroll-margin-top: 300px;
+  scroll-margin-bottom: 300px;
+  border: 10px solid transparent;
 }
 
-p:nth-child(odd) {
+.box:nth-child(odd) {
   color: white;
   background-color: black;
 }
 
-p:nth-child(even) {
+.box:nth-child(even) {
   color: black;
   background-color: white;
+}
+
+.active-box {
+  border: 10px solid #ADD8E6;
+}
+
+#mobile-controls {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.mobile-control {
+  flex-grow: 1;
+  border: 1px solid black;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 1em;
+  }
+
+  .box {
+    width: 600px;
+    scroll-margin-bottom: 100px;
+  }
+
+  .box:nth-child(odd) {
+    align-self: flex-start;
+  }
+
+  .box:nth-child(odd) {
+    align-self: flex-end;
+  }
+
+
+  #mobile-controls {
+    display: none;
+  }
 }
